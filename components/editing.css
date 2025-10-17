@@ -1,0 +1,254 @@
+.grd-bck {
+  background: linear-gradient(var(--clr-blue) 20%, var(--clr-purple));
+  border-radius: 60px 60px 0 0;
+}
+
+.editing {
+  font-family: "JetBrains Mono", monospace;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+}
+
+.editing__picture {
+  width: 100%;
+  grid-area: 1/1;
+}
+
+.editing__chart {
+  display: none;
+}
+
+.editing__img {
+  transition: 0.5s ease;
+  border-radius: 60px;
+  mix-blend-mode: luminosity;
+  z-index: 0;
+  width: 100%;
+  max-width: none;
+  filter: brightness(50%);
+  -webkit-mask-image: linear-gradient(to top, transparent, black);
+  mask-image: linear-gradient(to top, transparent, black);
+}
+
+
+
+
+
+
+.editing__flex {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 2rem;
+  margin-left: -2rem;
+  margin-bottom: 5rem;
+}
+
+.editing__button1 {
+  align-self: center;
+  display: flex;
+}
+
+.editing__logo {
+  width: 25%;
+  transition: 0.5s ease;
+}
+
+
+
+
+
+
+
+.editing__content {
+  grid-area: 1 / 1;
+  margin-left: 1rem;
+  z-index: 1;
+}
+
+.editing__title {
+  margin-top: 3rem;
+  font-size: var(--size-4xl);
+  background: linear-gradient(to bottom, var(--clr-light) 40%, var(--clr-darkgrey));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.8rem;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+  font-weight: 800;
+}
+
+.editing__overview {
+  margin-bottom: 0.8rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--clr-light);
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.editing__paragraph {
+  font-size: var(--size-s);
+  letter-spacing: 0.1rem;
+  color: var(--clr-light);
+  font-family: "Kanit", sans-serif;
+  line-height: 18px;
+  font-weight: 350;
+}
+
+
+
+
+@media (min-width: 475px) {
+  .editing__overview {
+    font-size: var(--size-lg);
+  }
+
+  .editing {
+    font-size: var(--size-base);
+    line-height: normal;
+  }
+}
+
+@media (min-width: 640px) {
+  .editing__content {
+    margin-left: 2rem;
+  }
+
+  .editing__title {
+    font-size: var(--size-5xl);
+  }
+
+  .editing__overview {
+    font-size: var(--size-xl);
+  }
+
+  .editing__paragraph {
+    font-size: var(--size-lg);
+    line-height: 1.8;
+    margin-right: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .editing__title {
+    font-size: var(--size-6xl);
+    letter-spacing: 1.5rem;
+  }
+
+  .editing__overview {
+    font-size: var(--size-1_5xl);
+  }
+
+  .editing__paragraph {
+    font-size: var(--size-xl);
+    margin-right: 9rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .editing__flex {
+    margin-right: 0;
+  }
+
+  .editing {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 2rem;
+  }
+
+  .editing__content {
+    grid-area: 1/1;
+  }
+
+  .editing__picture {
+    grid-area: 1/2;
+    display: flex;
+    flex-direction: column;
+    mix-blend-mode: luminosity;
+    filter: invert(0%);
+    align-self: flex-start;
+  }
+
+  .editing__img {
+    width: 100%;
+    filter: drop-shadow(5px 8px 10px rgba(0, 0, 0, 0.5));
+    filter: brightness(80%);
+    -webkit-mask-image: none;
+    mask-image: none;
+    border-radius: 60px;
+  }
+
+  .editing__chart {
+    display: flex;
+    width: 90%;
+    margin-left: 2rem;
+    margin-top: -6rem;
+    z-index: 1;
+  }
+
+  .editing__title {
+    font-size: var(--size-6xl);
+    margin-bottom: 2rem;
+  }
+
+  .editing__overview {
+    font-size: var(--size-2xl);
+    letter-spacing: 0.15rem;
+  }
+
+  .editing__paragraph {
+    font-size: var(--size-xl);
+    margin-right: 0rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .editing__title {
+    font-size: var(--size-7xl);
+    letter-spacing: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .editing__overview {
+    font-size: var(--size-3xl);
+    letter-spacing: 0.15rem;
+  }
+
+  .editing__paragraph {
+    font-size: var(--size-1_5xl);
+    line-height: 1.8;
+    margin-right: 0rem;
+  }
+  .editing__chart{
+    margin-top: -9rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .editing__title {
+    font-size: var(--size-8xl);
+    letter-spacing: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .editing__overview {
+    font-size: var(--size-4xl);
+    letter-spacing: 0.15rem;
+  }
+
+  .editing__paragraph {
+    font-size: var(--size-2xl);
+  }
+  .editing__chart{
+    margin-top: -12rem;
+  }
+
+}

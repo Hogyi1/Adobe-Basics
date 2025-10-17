@@ -1,0 +1,361 @@
+.gradient-background {
+    background: linear-gradient(var(--clr-background_top), var(--clr-blue), var(--clr-purple), var(--clr-blue) 85%, var(--clr-grey) 93%, var(--clr-blue));
+
+    height: fit-content;
+    transition: 0.3s;
+}
+
+.gradient-background2 {
+    background: linear-gradient(var(--clr-background_top), var(--clr-blue), var(--clr-grey) 80%, var(--clr-blue)) no-repeat;
+
+    height: fit-content;
+    transition: 0.3s;
+}
+
+.gradient-background3 {
+    background: linear-gradient(var(--clr-background_top), var(--clr-blue) 10%, var(--clr-purple) 40%, var(--clr-darkblue), var(--clr-grey) 90%, var(--clr-blue));
+    height: fit-content;
+    transition: 0.3s;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin: 0 auto;
+}
+
+.section.editing {
+    margin-top: -4.6rem;
+}
+
+.section {
+    z-index: 2;
+}
+
+.section__courses {
+    z-index: 1;
+    margin-top: 2rem;
+}
+
+
+.section__request {
+    z-index: 2;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+}
+
+
+/* print */
+@media print {
+
+    * {
+        opacity: 1;
+        z-index: 0;
+    }
+
+
+    body {
+        font: 12pt Georgia, "Times New Roman", Times, serif;
+        line-height: 1.3;
+    }
+
+    video,
+    footer,
+    header,
+    iframe,
+    .btn-input,
+    .btn-lets,
+    .btn-learn,
+    .slider__carousel,
+    .header,
+    .footer,
+    .editing__chart {
+        display: none;
+    }
+
+
+    img,
+    figure,
+    .editing__img,
+    .visualfx__logo,
+    .editing__logo,
+    .visualfx__img,
+    .about__img,
+    .visualfx__picture,.choose,.hideit {
+        /* max-width: 100px;
+        bottom: -350px;
+        filter: none;
+        mix-blend-mode: normal;
+        mask-image: none;
+        border-radius: 0;
+        flex: auto;
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        padding: 0;
+        margin-top: 0;
+        position: absolute; */
+        display: none;
+    }
+
+
+
+
+
+
+
+
+    .editing__flex,
+    .editing__content {
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .courses__title{
+        font-size: initial;
+    }
+
+    .container,
+    .section,
+    section,
+    article,
+    aside {
+        padding: initial;
+        margin: initial;
+        opacity: 1 !important;
+        position: relative;
+        margin: 1rem;
+        page-break-before: avoid;
+    }
+
+
+    .section__courses{
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+    .editing,
+    .visualfx,
+    .about,
+    .editing__content,
+    .visualfx__content,
+    .about__content {
+        margin: 1rem;
+        background: none;
+        position: static;
+    }
+
+    .about__content {
+        position: relative;
+    }
+
+    .tutorial__box,.tutorial__text{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    form, .form__container{
+        box-shadow: none;
+    }
+
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 3rem;
+        position: static;
+    }
+
+    .courses__box {
+        margin-top: 0;
+        
+    }
+
+    details {
+        all: initial;
+        margin-top: -7rem;
+    }
+
+    .courses__table {
+        margin-top: 0;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    td,
+    th {
+        padding: 8px;
+        height: auto;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        color: white;
+    }
+
+    .printable {
+        display: inline-block;
+    }
+
+    .revealfade,
+    .reveal,
+    .revealup,
+    .revealleft,
+    .revealright {
+        opacity: 1;
+        transform: initial;
+    }
+
+
+    p,
+    .editing__paragraph,
+    .visualfx__paragraph,
+    .about__paragraph,
+    .hero__caption,
+    .tutorial__paragraph {
+        all: initial;
+        color: #000 !important;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: auto;
+        filter: none;
+        font-size: initial;
+        page-break-inside: avoid;
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        padding: 0;
+        position: static;
+        box-shadow: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    .editing__title,
+    .editing__overview,
+    .visualfx__title,
+    .visualfx__overview,
+    .about__title,
+    .about__overview,
+    .hero__title,
+    .hero__adobe,
+    .hero__basics,
+    .tutorial__title {
+        position: static;
+        font-size: initial;
+        color: #000 !important;
+        box-shadow: none;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0rem;
+        filter: none;
+        text-shadow: none;
+        page-break-after: avoid !important;
+        letter-spacing: normal;
+        all: inherit;
+        opacity: 1;
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        padding: 0;
+    }
+
+
+}
+
+
+
+.main {
+    margin: 0.5rem;
+}
+
+
+
+/* xs */
+@media (min-width: 475px) {
+    .container {
+        max-width: 475px;
+    }
+
+
+
+}
+
+/* sm */
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+
+}
+
+/* md */
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .main {
+        margin: 0rem;
+    }
+
+
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}

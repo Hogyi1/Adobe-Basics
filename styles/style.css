@@ -1,0 +1,251 @@
+:root {
+
+
+  /*media
+@media (min-width: 475px) {}
+@media (min-width: 640px) {}
+@media (min-width: 768px) {}
+@media (min-width: 1024px) {}
+@media (min-width: 1280px) {}
+@media (min-width: 1536px) {}
+*/
+
+
+  /*sizes*/
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-s: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-1_5xl: 1.35rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 5rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
+}
+
+:root[data-theme="light"] {
+  --clr-darkgrey: #32363D;
+  --clr-light: #FFFFFF;
+  --clr-blue: #146BD1;
+  --clr-purple: #9999FF;
+  --clr-almostgrey: #4C4D80;
+  --clr-darkblue: #030355;
+  --clr-grey: #AAB8C2;
+  --clr-header: rgba(255, 255, 255, 0.6);
+  --clr-header_hover: rgba(255, 255, 255, 0.8);
+  --clr-dark: #000000;
+  --clr-almostdarkgrey: #292C31;
+
+
+  --clr-background_top: white;
+  --clr-darklight: rgba(255, 255, 255, 1);
+
+  --clr-header__text: #5e5e5e;
+  --clr-header__text_hover: #000000;
+  --clr-header__button_text: #cdcdcd;
+  --clr-header__button: #030355;
+  --clr-button__text: #9999FF;
+  --clr-switch: rgba(255, 255, 255, 0.623);
+
+  --clr-loading:#FFFFFF ;
+
+
+  --clr-courses-black:#000000;
+  --clr-courses-white:#FFFFFF;
+  --clr-courses-darkgrey:#828e97;
+  --clr-courses-grey: #AAB8C2;
+  --clr-inactive-link: #7a7a7a;
+  --clr-request: white;
+  --clr-textarea: #D9D9D9;
+
+  --clr-bluebutton: #146BD1;
+}
+
+:root[data-theme="dark"] {
+  --clr-darkgrey: #32363D;
+  --clr-light: #FFFFFF;
+  --clr-blue: #00277b;
+  --clr-purple: #685c83;
+  --clr-almostgrey: #463f58;
+  --clr-darkblue: #010160;
+  --clr-grey: #848484;
+  --clr-header: rgba(0, 0, 0, 0.6);
+  --clr-header_hover: rgba(0, 0, 0, 0.8);
+  --clr-dark: #000000;
+  --clr-almostdarkgrey: #24262a;
+  --clr-inactive-link: #5e5e5e;
+
+
+  --clr-background_top: #3e3e3e;
+  --clr-header__text: #bebebe;
+  --clr-header__text_hover: white;
+  --clr-header__button_text: #cdcdcd;
+  --clr-header__button: #030355;
+  --clr-button__text: #9999FF;
+  --clr-switch: rgba(255, 255, 255, 0.776);
+  --clr-darklight: rgba(0, 0, 0, 8);
+  --clr-loading:#000000 ;
+
+
+  --clr-courses-black:#FFFFFF;
+  --clr-courses-white:#000000;
+  --clr-courses-darkgrey:#303030;
+  --clr-courses-grey: #000000;
+
+  --clr-request: #646464;
+  --clr-textarea: #b1b1b1;
+
+
+  --clr-bluebutton: #146BD1;
+
+}
+
+
+
+
+
+
+
+.kipozicional a {position:absolute; left:-9999px;}				
+.kipozicional a:focus {position:static; background:white}
+
+
+
+
+* {
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+}
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  ANIMATIONS  */
+
+
+.revealed{
+  opacity: 1;
+}
+
+
+
+.revealfade {
+  opacity: 1;
+
+}
+
+.revealfade.visible {
+  opacity: 0;
+  transition: 0.5s ease-in;
+  visibility: hidden;
+}
+
+.reveal {
+  opacity: 0;
+  transition: 0.5s ease-in;
+}
+
+.reveal.visible{
+  opacity: 1;
+}
+
+.revealup {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: 0.5s ease-in;
+}
+
+.revealup.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.revealleft {
+  opacity: 0;
+  transform: translatex(-15px);
+  transition: 0.5s ease-in;
+}
+
+.revealleft.visible {
+  opacity: 1;
+  transform: translatex(0px);
+}
+
+.revealright {
+  opacity: 0;
+  transform: translatex(15px);
+  transition: 0.5s ease-in;
+}
+
+.revealright.visible {
+  opacity: 1;
+  transform: translatex(0px);
+}
+
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.fadeInUpElement {
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
